@@ -14,7 +14,7 @@ namespace Tyuiu.BrezinaYS.Sprint5.Task3.V27.Lib
             {
                 writer.Write(BitConverter.GetBytes(y));
             }
-            return path;
+            return y;
 
         }
     }
