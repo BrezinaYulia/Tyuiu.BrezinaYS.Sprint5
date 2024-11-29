@@ -12,14 +12,23 @@ namespace Tyuiu.BrezinaYS.Sprint5.Task5.V2.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
+                int res = 0;
+                int c = 0;
+
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (Convert.ToDouble(line) > 0)
-                    {
-                        res = res + Convert.ToDouble(line);
-                        c += 1;
-                    }
                     
+                    line = line.Replace(",", "");
+                    int[] array = line.Split(' ').Select(int.Parse).ToArray();
+                    for (int i = 0; i < array.Length; i++ )
+                    {
+                        if (Convert.ToInt32(array[i]) > 0)
+                        {
+                            res += Convert.ToInt32(array[i]);
+                            c++;
+                        }
+                    }
+
                 }
             }
             return Math.Round((res / c), 3);
