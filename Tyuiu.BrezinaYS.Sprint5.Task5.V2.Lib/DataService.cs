@@ -12,8 +12,7 @@ namespace Tyuiu.BrezinaYS.Sprint5.Task5.V2.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
-                int res = 0;
-                int c = 0;
+                
 
                 while ((line = reader.ReadLine()) != null)
                 {
